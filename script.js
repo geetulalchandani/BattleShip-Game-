@@ -30,10 +30,6 @@ class Board {
     }
 
     // populate board
-
-
-    
-
     // document.getElementById("Start Game").addEventListener("click", () => battleship.()); = how to pass events below into this?  
 
     // loop through ship length array   
@@ -97,7 +93,9 @@ class Board {
                 } else {
                     individualGridItemSelector.style.backgroundColor = "grey";
                 }
-            })
+            
+              })   
+            }
         };
 
         document
@@ -109,7 +107,7 @@ class Board {
   resetGame() {
     for (let i = 0; i < this.boardSize; i++) {
       for (let j = 0; j < this.boardSize; j++) {
-        this.spots[i][j] === "";
+        this.spots[i][j] === ""; 
         document.getElementById(
           "grid-item" + (i * this.boardSize + j)
         ).style.backgroundColor = "white";
@@ -118,9 +116,37 @@ class Board {
     }
 
     // winGame () {
-    
+    //   //loop over arrays 
+    //   //array.includes = null 
+
+    //       let total = 0 
+    //       for (let i = 0; i < boardSize; i++) {
+    //           for (let j = 0; j < boardSize; j++) {
+    //      let a = document.getElementById(individualGridItem)
+    //      if (this.spots[i][j] === "X");{
+    //      total++
+    //        }
+    //     }
+        
+    //   }
+    //     (if total = 15 ) {
+    //       window.alert("You won");
+    //     }
+
+    // }
+
+         
+      
+
+
+
+
+    //
 
     // checkWin(emptyCount) { 
+    
+    //create a class with all of the ships that are clicked 
+    // class == 15 clicks 
 
   // if click document.getElementById(individualGridItem); == 15 you won logic prompt. 
 //     emptyCount = 15;
@@ -134,7 +160,9 @@ class Board {
 
     // }
 
+  
   }
+
 
 
 
