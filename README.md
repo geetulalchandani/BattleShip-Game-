@@ -16,3 +16,6 @@ Battleship is a strategy based guessing game. Traditionally, within the game the
 - Add a visual aspect to the ships being sank
 - Include sounds a ship is sank
 - Improve AI and implement a multi-player option
+
+# Link to the Game 
+file:///Users/geetulalchandani/GA/Projects/GeetuBattleShip/index.html
