@@ -1,6 +1,3 @@
-//math of i * boardsize + j because you know you only have two variables to work with when creating a 2D array in JS
-
-
 
 //Made a variable to get grid-container from html 
 
@@ -8,11 +5,9 @@ const container = document.getElementById("grid-container");
 
 
 //function to use to generate a random whole number 
-
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
   }
-
 
 
 class Board {
@@ -21,7 +16,7 @@ class Board {
     const ships = [1,2,3,4,5];
 
     // create board using variables defined above
-    // *if time: remove the rows and columns *
+
     for (let i = 0; i < boardSize; i++) {
       spots[i] = [];
       for (let j = 0; j < boardSize; j++) {
@@ -30,11 +25,10 @@ class Board {
     }
 
     // populate board
-    // document.getElementById("Start Game").addEventListener("click", () => battleship.()); = how to pass events below into this?  
+      
 
+    
     // loop through ship length array   
-
-
     for (let s = 0; s < ships.length; s++) {
         let shipLength = ships[s];
         // While the ship has not been placed, keep trying again in a loop 
@@ -62,7 +56,7 @@ class Board {
             }
 
             if (emptyCount === shipLength) {
-                // we are clear to place the ship
+                // check it spot is clear to place the ship
                 for (let k = 0; k < shipLength; k++) {
                     if (orientation === true &&  increasing === true &&     j + k < boardSize   && spots[i][j + k] !== 'X') spots[i][j+k] = 'X';
                     if (orientation === true &&  increasing === false &&    j - k >= 0          && spots[i][j - k] !== 'X') spots[i][j-k] = 'X';
@@ -75,7 +69,7 @@ class Board {
             emptyCount++;
         }
         }   
-        
+        //loop through the board to add an event listener and append grid item in a div 
         console.log(spots)
         this.spots = spots;
         this.boardSize = boardSize;
@@ -101,13 +95,13 @@ class Board {
               })   
             }
         };
-
+        //add reset button 
         document
             .getElementById("reset")
             .addEventListener("click", () => this.resetGame());
   
     }   
-
+      //reset game function
   resetGame() {
     for (let i = 0; i < this.boardSize; i++) {
       for (let j = 0; j < this.boardSize; j++) {
@@ -118,7 +112,7 @@ class Board {
         }
       }
     }
-
+    //win game logic 
    winGame () {
     console.log(this.shipClickedCounter)
         if (this.shipClickedCounter == 15 ) { 
@@ -127,36 +121,5 @@ class Board {
     }
   }
 
-
-
-
   const battleship = new Board(10);
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// updateMove () {
-//     --already stored in the above variable
-// }
-
-// currentPlayer () {
-
-// }
-
-
-
