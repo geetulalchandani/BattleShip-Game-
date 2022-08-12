@@ -1,4 +1,4 @@
-# BattleShip-Game-
+# BattleShip Game
 
 # Overview 
 Battleship is a strategy based guessing game. Traditionally, within the game there are 5 ships placed at random location on a 10x10 grid. The objective of the game is to "sink" each ship by guessing the location of the ship on the board. 
