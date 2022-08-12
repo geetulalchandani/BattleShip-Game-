@@ -5,9 +5,9 @@ Battleship is a strategy based guessing game. Traditionally, within the game the
 
 
 # Technologies
-\*HTML 
-\*CSS
-\*JavaScript 
+* HTML 
+* CSS
+* JavaScript 
 
 # NextSteps 
 
