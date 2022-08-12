@@ -72,13 +72,14 @@ class Board {
                 break;
             }
 
-            tries++;
+            emptyCount++;
         }
         }   
         
         console.log(spots)
         this.spots = spots;
         this.boardSize = boardSize;
+        this.shipClickedCounter = 0
         for (let i = 0; i < boardSize; i++) {
             for (let j = 0; j < boardSize; j++) {
                 const node = document.createElement("div");
@@ -89,19 +90,22 @@ class Board {
                 const individualGridItemSelector = document.getElementById(individualGridItem);
                 individualGridItemSelector.addEventListener('click', () => {
                 if (this.spots[i][j] === "X") {
-                    individualGridItemSelector.style.backgroundColor = "red";
+                    if (individualGridItemSelector.style.backgroundColor !== "red") {
+                    this.shipClickedCounter++
+                  }
+                  individualGridItemSelector.style.backgroundColor = "red";
                 } else {
                     individualGridItemSelector.style.backgroundColor = "grey";
                 }
-            
+                this.winGame()
               })   
             }
         };
 
         document
             .getElementById("reset")
-            .addEventListener("click", () => battleship.resetGame());
-    
+            .addEventListener("click", () => this.resetGame());
+  
     }   
 
   resetGame() {
@@ -115,52 +119,12 @@ class Board {
       }
     }
 
-    // winGame () {
-    //   //loop over arrays 
-    //   //array.includes = null 
-
-    //       let total = 0 
-    //       for (let i = 0; i < boardSize; i++) {
-    //           for (let j = 0; j < boardSize; j++) {
-    //      let a = document.getElementById(individualGridItem)
-    //      if (this.spots[i][j] === "X");{
-    //      total++
-    //        }
-    //     }
-        
-    //   }
-    //     (if total = 15 ) {
-    //       window.alert("You won");
-    //     }
-
-    // }
-
-         
-      
-
-
-
-
-    //
-
-    // checkWin(emptyCount) { 
-    
-    //create a class with all of the ships that are clicked 
-    // class == 15 clicks 
-
-  // if click document.getElementById(individualGridItem); == 15 you won logic prompt. 
-//     emptyCount = 15;
-//     return prompt("you won!");
-
-// }
-
-
-
-// if all the red squares are clicked == user won 
-
-    // }
-
-  
+   winGame () {
+    console.log(this.shipClickedCounter)
+        if (this.shipClickedCounter == 15 ) { 
+          document.querySelector(".messageboard").innerText = "You won";       
+        }
+    }
   }
 
 

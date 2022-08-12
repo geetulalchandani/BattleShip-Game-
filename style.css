@@ -1,9 +1,35 @@
 h1 {
     text-align: center;
+    margin: 22px; 
+    font-size: 50px;
+    color:rgba(0, 0, 0, 0.8)
+    font-family: "Lora", serif; 
+
+}
+
+
+h2 {
+    text-align: center; 
+    font-size: 40px;
+
+}
+
+p {
+    text-align: center
+    
 }
 
 
 
+#reset {
+    height: 5vh;
+    width: 9vw;
+    margin: 0px 150px 0px 0px;
+    font-family: "Lora", serif;
+    font-size: 20px;
+    cursor: pointer
+
+}
 
 #grid-container {
   display: grid;
@@ -26,7 +52,7 @@ h1 {
   background-color: gray;
 }
 
+.messageboard {
+    text-align: center;
 
-
-.class {
 }
