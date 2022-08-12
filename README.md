@@ -10,13 +10,13 @@ Battleship is a strategy based guessing game. Traditionally, within the game the
 \*JavaScript 
 
 # NextSteps 
-\*
-*Add a visual counter to display the number of ships shank 
-*Add a visual aspect to the ships being sank
-*Include sounds a ship is sank 
-*Improve AI and implement a multi-player option
 
-/*
+* Add a visual counter to display the number of ships shank 
+* Add a visual aspect to the ships being sank
+* Include sounds a ship is sank 
+* Improve AI and implement a multi-player option
+
+
 
 
 
