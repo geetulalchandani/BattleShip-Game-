@@ -18,4 +18,4 @@ Battleship is a strategy based guessing game. Traditionally, within the game the
 - Improve AI and implement a multi-player option with draggable ships 
 
 # Link to the Game 
-file:///Users/geetulalchandani/GA/Projects/GeetuBattleShip/index.html
+https://geetulalchandani.github.io/BattleShip-Game-/
